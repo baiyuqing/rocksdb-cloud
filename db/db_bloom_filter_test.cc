@@ -2669,6 +2669,7 @@ TEST_F(DBBloomFilterTest, OptimizeFiltersForHits) {
     read_options.optimize_for_hits = true;
     std::unique_ptr<Iterator> iter(db_->NewIterator(read_options, handles_[1]));
     int i = 0;
+    (void)i;
     for (iter->SeekToFirst(); iter->Valid(); iter->Next()) {
       ++i;
     }
@@ -2689,6 +2690,7 @@ TEST_F(DBBloomFilterTest, OptimizeFiltersForHits) {
     std::unique_ptr<Iterator> iter(
         db_->NewIterator(ReadOptions(), handles_[1]));
     int i = 0;
+    (void)i;
     for (iter->SeekToFirst(); iter->Valid(); iter->Next()) {
       ++i;
     }

@@ -3688,6 +3688,7 @@ void VersionStorageInfo::SetFinalized() {
       assert(level < num_non_empty_levels());
     }
   }
+  (void)num_empty_non_l0_level;
   assert(compaction_level_.size() > 0);
   assert(compaction_level_.size() == compaction_score_.size());
 #endif

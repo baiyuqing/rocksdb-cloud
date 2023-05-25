@@ -3484,6 +3484,7 @@ static bool CompareIterators(int step, DB* model, DB* db,
   Iterator* dbiter = db->NewIterator(options);
   bool ok = true;
   int count = 0;
+  (void)count;
   for (miter->SeekToFirst(), dbiter->SeekToFirst();
        ok && miter->Valid() && dbiter->Valid(); miter->Next(), dbiter->Next()) {
     count++;

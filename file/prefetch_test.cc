@@ -169,6 +169,7 @@ TEST_P(PrefetchTest, Basic) {
   {
     auto iter = std::unique_ptr<Iterator>(db_->NewIterator(ReadOptions()));
     int num_keys = 0;
+    (void)num_keys;
     for (iter->SeekToFirst(); iter->Valid(); iter->Next()) {
       num_keys++;
     }
@@ -1684,6 +1685,7 @@ namespace {
     }
 
     int total_keys = 0;
+    (void)total_keys;
     // Write the keys.
     {
       WriteBatch batch;
